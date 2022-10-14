@@ -18,7 +18,11 @@ const aCourse = {
       instructor: 'Sis A'
     }
   ],
-  changeEnrollment: function (sectionNum, add = true) {
+  init: function () {
+    setCourseInfo(this);
+    updateTable(this);
+  },
+  changeEnrollment: function (sectionNum = 1, add = true) {
     const section = sectionNum - 1;
     if (this.sections[section].sectionNum == sectionNum) {
       if (add) {
@@ -33,21 +37,10 @@ const aCourse = {
 };
 
 //Set the headings based on the object's values
-document.querySelector('#courseCode').textContent = aCourse.code;
-document.querySelector('#courseName').textContent = aCourse.name;
-updateTable(aCourse);
-
-//event handler for enroll student button
-document.querySelector('#enrollStudent').addEventListener('click', (e) => {
-  const section = +document.querySelector('#sectionNumber').value;
-  aCourse.changeEnrollment(section);
-});
-
-//event handler for drop student button
-document.querySelector('#dropStudent').addEventListener('click', (e) => {
-  const section = +document.querySelector('#sectionNumber').value;
-  aCourse.changeEnrollment(section, false);
-});
+function setCourseInfo(aCourse) {
+  document.querySelector('#courseCode').textContent = aCourse.code;
+  document.querySelector('#courseName').textContent = aCourse.name;
+};
 
 //function to update the table
 function updateTable(aCourse) {
@@ -83,3 +76,5 @@ function updateTable(aCourse) {
     list.appendChild(listItem);
   }
 }
+
+export default aCourse;
