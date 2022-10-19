@@ -36,8 +36,8 @@ const aspCalc = {
     document.getElementById('submitButton').addEventListener('click', aspCalc.updateImg);
     document.getElementById('pixelHeight').addEventListener('input', aspCalc.updateWidth);
     document.getElementById('pixelWidth').addEventListener('input', aspCalc.updateHeight);
-    document.getElementById('aspectHeight').addEventListener('input', aspCalc.updateWidth);
-    document.getElementById('aspectWidth').addEventListener('input', aspCalc.updateHeight);
+    document.getElementById('aspectHeight').addEventListener('input', aspCalc.updateHeight);
+    document.getElementById('aspectWidth').addEventListener('input', aspCalc.updateWidth);
 
   },
   setAspects: function () {
