@@ -1,8 +1,10 @@
 /* HTML Selectors */
 body {
     font-family: 'Kalam', cursive;
+    background-color: #181a1b;
+    color: white;
+    font-size: 16pt;
 }
-
 div {
     margin: 10px;
     text-align: center;
