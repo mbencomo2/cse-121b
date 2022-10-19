@@ -124,7 +124,7 @@ function updateImage(w, h) {
 
   // if the width the user input is larget than the width of 'main, scale the image accordingly
   if (w > mainWidth) {
-    fakeImg.setAttribute("style", `width:${w*(mainWidth/w)}px; height: ${h*(mainWidth/w)}px;`);
+    fakeImg.setAttribute("style", `width:${Math.round(w*(mainWidth/w))}px; height: ${Math.round(h*(mainWidth/w))}px;`);
     warning.textContent = 'Image has been scaled to fit appropriately';
   }
   else {

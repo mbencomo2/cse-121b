@@ -1,4 +1,8 @@
 /* HTML Selectors */
+body {
+    font-size: 16pt;
+}
+
 nav {
     background-color: black;
     color: white;
@@ -44,6 +48,7 @@ button {
     margin: .5rem auto;
     background-color: #181a1b;
     color: white;
+    font-size: 16pt;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 5px;
     grid-area: 2/1/2/3;
@@ -56,6 +61,7 @@ button:hover {
 
 select {
     min-width: 25%;
+    font-size: 14pt;
     background-color: #181a1b;
     border: 1px solid rgba(255, 255, 255, .3);
     color: white;
@@ -65,22 +71,10 @@ select {
 input {
     width: 50%;
     text-align: center;
+    font-size: 14pt;
     background-color: #181a1b;
     border: 1px solid rgba(255, 255, 255, .3);
     color: white;
-}
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-}
-
-article {
-    margin: 25px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 header {
@@ -107,6 +101,17 @@ footer {
     background-color: rgba(255, 255, 255, .2);
     width: 100%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+
+.input {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .urBracket {

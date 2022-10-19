@@ -29,32 +29,32 @@
     <p>Use the presets or type your own custom values below.</p>
   </header>
   <main>
-    <article id="presets">
-      <label for="presets">Common Aspects</label>
+    <div id="presets">
+      <label for="preset">Common Aspects</label>
       <select id="preset"></select>
-    </article>
-    <section class="controls">
-      <article>
+    </div>
+    <div class="controls">
+      <div class="input">
         <label for="aspectWidth">Aspect Width</label>
         <input type="text" id="aspectWidth" name="aspectWidth">
         
-        <label for="width">Pixels Width</label>
+        <label for="pixelWidth">Pixels Width</label>
         <input type="text" id="pixelWidth" name="width">
-      </article>
-      <article>
+      </div>
+      <div class="input">
         <label for="aspectHeight">Aspect Height</label>
         <input type="text" name="aspectHeight" id="aspectHeight">
   
-        <label for="height">Pixels Height</label>
+        <label for="pixelHeight">Pixels Height</label>
         <input type="text" id="pixelHeight" name="height">
-      </article>
+      </div>
       <button type="submit" id="submitButton">Preview</button>
-    </section>
-    <label for="Image" id="warning"></label>
+    </div>
+    <p id="warning"></p>
     <div id="fakeImg" >
       <div class="urBracket"></div>
       <div class="ulBracket"></div>
-      <h3 id="fakeImgSize"></h3>
+      <h3 id="fakeImgSize">0 x 0</h3>
       <div class="lrBracket"></div>
       <div class="llBracket"></div>
     </div>
