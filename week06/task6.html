@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CS121B Week 06 | Personal Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="./styles/task6.css">
+  <script src="js/modules.js" type="module"></script>
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../week02/task2.html">Lesson 2</a></li>
+      <li><a href="../week03/task3.html">Lesson 3</a></li>
+      <li><a href="../week04/task4.html">Lesson 4</a></li>
+      <li><a href="../week05/task5.html">Lesson 5</a></li>
+      <li><a class="active" href="#">Lesson 6</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Image Aspect Ratio Calculator</h1>
+    <p>Use the presets or type your own custom values below.</p>
+  </header>
+  <main>
+    <article id="presets">
+      <label for="presets">Common Aspects</label>
+      <select id="preset"></select>
+    </article>
+    <section class="controls">
+      <article>
+        <label for="aspectWidth">Aspect Width</label>
+        <input type="text" id="aspectWidth" name="aspectWidth">
+        
+        <label for="width">Pixels Width</label>
+        <input type="text" id="pixelWidth" name="width">
+      </article>
+      <article>
+        <label for="aspectHeight">Aspect Height</label>
+        <input type="text" name="aspectHeight" id="aspectHeight">
+  
+        <label for="height">Pixels Height</label>
+        <input type="text" id="pixelHeight" name="height">
+      </article>
+      <button type="submit" id="submitButton">Preview</button>
+    </section>
+    <label for="Image" id="warning"></label>
+    <div id="fakeImg" >
+      <div class="upperBracket"></div>
+      <h3 id="fakeImgSize"></h3>
+      <div class="lowerBracket"></div>
+    </div>
+  </main>
+  <footer>
+    &copy;<span id="year"></span> | Aspect Ratio Calculator | Lesson 6
+  </footer>
+  <script src="../scripts/main.js"></script>
+</body>
+
+</html>

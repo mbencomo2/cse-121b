@@ -1,0 +1,14 @@
+# Image Apsect Ratio Calculator
+
+I have encountered many cases where I need to know the height and width of an image after resizing or changing the aspect ratio. Whether it is playing old games, editing photos, or designing icons and website assests, I need a calculator to help me know what pixel counts I need.
+
+# How it will work
+ 
+The calculator will have several features to make it work and easier to use.
+
+  1. A selector to choose preset aspect ratios
+  2. An image mockup that will approximate what the new image dimensions will look like.
+  3. The ability to manually input aspect ratios for whatever size you want.
+  4. A button to clear the form
+  
+This project seems simple on paper at least, with miniamal extra resources required. Arrays will be used to hold information about different aspect ratios, and display them to the user. Modules will be created to contain the necessary functions which will be called as necessary.
