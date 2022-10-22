@@ -118,9 +118,10 @@ function updateImage(w, h) {
   //get the width of the 'main' element
   const mainWidth = document.querySelector('main').clientWidth;
 
-  // if the width the user input is larget than the width of 'main, scale the image accordingly
+  // if the width the user input is larger than the width of 'main', scale the image accordingly
   if (w > mainWidth) {
-    fakeImg.setAttribute("style", `width:${Math.round(w * (mainWidth / w))}px; height: ${Math.round(h * (mainWidth / w))}px;`);
+    const scale = mainWidth / w
+    fakeImg.setAttribute("style", `width:${Math.round(w * scale)}px; height: ${Math.round(h * scale)}px;`);
     warning.textContent = 'Image has been scaled to fit appropriately';
   }
   else {
