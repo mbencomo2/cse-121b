@@ -81,16 +81,14 @@ const aspCalc = {
 function setCommonRatios(array) {
   // define the document element selector
   const select = document.getElementById('preset');
-  
-  // iterate through each element in the array, and acreate a new option for each
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-    
+
+  // iterate through each element in the array, and create a new option for each
+  array.forEach(element => {
     const option = document.createElement('option');
     option.value = element.name;
     option.textContent = `${element.name} - ${element.value[0]}:${element.value[1]}`;
     select.appendChild(option);
-  }
+  });
 }
 
 function setAspectRatio(array) {
@@ -100,14 +98,12 @@ function setAspectRatio(array) {
   const selector = document.getElementById('preset');
 
   // iterate through the array, finding the current option and applying the values
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-
+  array.forEach(element => {
     if (selector.value == element.name) {
       w.value = element.value[0];
       h.value = element.value[1];
     }
-  }
+  });
 
   // set default values for the inputs
   document.getElementById('pixelWidth').value = w.value * 120;
@@ -124,7 +120,7 @@ function updateImage(w, h) {
 
   // if the width the user input is larget than the width of 'main, scale the image accordingly
   if (w > mainWidth) {
-    fakeImg.setAttribute("style", `width:${Math.round(w*(mainWidth/w))}px; height: ${Math.round(h*(mainWidth/w))}px;`);
+    fakeImg.setAttribute("style", `width:${Math.round(w * (mainWidth / w))}px; height: ${Math.round(h * (mainWidth / w))}px;`);
     warning.textContent = 'Image has been scaled to fit appropriately';
   }
   else {
